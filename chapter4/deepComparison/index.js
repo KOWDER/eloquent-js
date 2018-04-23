@@ -1,0 +1,1 @@
+import deepEqual from '/deepEqual';
