@@ -1,4 +1,4 @@
-function listToArray(list) {
+const listToArray = (list) => {
     let arr = [];
     for (let node = list; node; node = node.rest) {
       arr.push(node.value);
@@ -6,7 +6,8 @@ function listToArray(list) {
     return arr;
   }
 
-  
+  export default listToArray;
+
 /*
 
 list = {

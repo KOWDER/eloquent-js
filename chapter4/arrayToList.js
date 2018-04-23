@@ -1,4 +1,4 @@
-function arrayToList(arr) {
+const arrayToList = (arr) => {
   let list = null
   for (let i = arr.length - 1; i >= 0; i--) {
     list = { value: arr[i], rest: list }
@@ -6,6 +6,7 @@ function arrayToList(arr) {
 return list
 }
 
+export default arrayToList;
 /* Flow for arrayToList([10, 20, 30])
 
 You have to reverse engineer the List
