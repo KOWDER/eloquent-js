@@ -27,7 +27,7 @@ const deepEqual = (x, y) => {
                     return false;
                 }
             }
-            return true;
+        return true;
         }
     }
     return false;
