@@ -3,3 +3,15 @@ const reverseArray = (arr) => {
 }
 
 export default reverseArray
+
+/* old way without higher order functions 
+
+function reverseArray(array) {
+    let output = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+      output.push(array[i]);
+    }
+    return output;
+  }
+
+*/
