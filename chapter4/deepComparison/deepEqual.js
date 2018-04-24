@@ -11,6 +11,27 @@ But you have to take one silly exception into account: because of a historical a
 The Object.keys function will be useful when you need to go over the properties of objects to compare them.
 */
 
+const deepEqual = (a, b) => {
+    if (a === b) return true;
+    
+    if (a == null || typeof a != "object" ||
+        b == null || typeof b != "object") return false;
+  
+    let arrA = Object.keys(a), arrB = Object.keys(b);
+  
+    if (arrA.length != arrB.length) return false;
+  
+    for (let value of arrA) {
+      if (!arrB.includes(value) || !deepEqual(a[value], b[value])) return false;
+    }
+  
+    return true;
+}
+
+export default deepEqual
+
+/* cheap version
+
 const deepEqual = (x, y) => {
     if (x === y) {
         return true;
@@ -33,7 +54,4 @@ const deepEqual = (x, y) => {
     return false;
 }
 
-export default deepEqual;
-
-//let obj = {here: {is: "an"}, object: null};
-
+*/
